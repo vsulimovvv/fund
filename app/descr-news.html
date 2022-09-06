@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Система добра</title>
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+  />
+
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="popup popup--projects">
+  <div class="popup__container">
+    <div class="popup__top">
+      <span class="popup__name">Получить консультацию</span>
+
+      <button class="popup__close" type="button">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="popup__body">
+      <form class="form-sell form-sell--dark">
+        <label class="form-sell__group">
+          <input
+            class="form-sell__input"
+            type="tel"
+            placeholder="Введите Ваш телефон"
+          />
+        </label>
+        <button class="form-sell__btn btn btn--white" type="submit">
+          Получить консультацию
+        </button>
+        <label class="form-sell__checkbox checkbox checkbox--white">
+          <input class="checkbox__input" type="checkbox" checked />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text"
+            >Отправляя заявку я соглашаюсь на обработку персональных
+            данных</span
+          >
+        </label>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="site-container">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О программе</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Обучение</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Полезные материалы</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <button class="mobile-menu__btn btn" type="button">Купить бизнес</button>
+      <button class="mobile-menu__btn btn btn--bordered" type="button">
+        Продать бизнес
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <nav class="header__wrapper">
+      <a class="header__logo logo" href="#">
+        <img src="img/logo.png" alt="Логотип" />
+      </a>
+
+      <div class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link active" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О фонде </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Фотоотчеты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Как помочь</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Если вам нужна помощь</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+      <main class="main mt"><section class="descr-news">
+  <div class="container">
+    <h1 class="descr-news__title">
+      Госдума рассмотрит законопроект о выплате пособия к 1 сентября
+    </h1>
+
+    <div class="descr-news__img">
+      <picture>
+        <source srcset="img/descr-news.avif" type="image/avif" />
+        <source srcset="img/descr-news.webp" type="image/webp" />
+        <img src="img/descr-news.jpg" alt="descr-news" loading="lazy" />
+      </picture>
+    </div>
+
+    <div class="descr-news__text">
+      <p>
+        Председатель Партии «СПРАВЕДЛИВАЯ РОССИЯ — ЗА ПРАВДУ», руководитель
+        партийной фракции в Госдуме Сергей Миронов предлагает ввести ежегодную
+        выплату для семей, чьи дети обучаются в школах, а также на очной форме
+        средних специальных и высших учебных заведений. Законопроект с таким
+        предложением внесён на рассмотрение Государственной Думы, сообщает сайт
+        партии.
+      </p>
+      <p>
+        «Для всех школьников предлагаем установить ежегодную выплату в размере
+        21,8 тысячи рублей. Для малоимущих семей она должна быть больше, её
+        нужно увеличить до 34,6 тысячи рублей», — прокомментировал политик.
+      </p>
+      <p>
+        «По нашему мнению, выплачивать средства нужно не только школьникам.
+        Пособие должны получать студенты колледжей, техникумов и вузов,
+        обучающиеся на очной форме обучения и признанные малоимущими. Для них
+        предлагаем установить выплату в размере 23,2 тысячи рублей. Перечислять
+        средства предлагаем во втором полугодии соответствующего календарного
+        года, когда дети идут на учёбу», — добавил парламентарий.
+      </p>
+      <p>
+        «Хорошо известно, что затраты граждан на сбор детей в школу, техникумы и
+        вузы составляют значительную часть семейного бюджета. Больше всего
+        родители, конечно же, переживают за первоклассников. Для них нужно
+        купить одежду, обувь, рюкзак, тетради, канцелярские принадлежности. Всё
+        это стоит немалых денег, и на приобретение этих товаров средства есть
+        далеко не в каждой российской семье. При этом надо отметить, что доходы
+        граждан в последние несколько лет стремительно падают, а пандемия,
+        санкции только усугубили эти проблемы. Людям нужна реальная поддержка со
+        стороны государства, и самое время протянуть руку помощи», — считает
+        Председатель партии.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <a class="footer__logo logo" href="#">
+          <img src="img/logo.png" alt="Логотип" />
+        </a>
+      </div>
+      <div class="footer__lists">
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> О фонде</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Наши проекты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Фотоотчеты </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Как помочь</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Если вам нужна помощь </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <a class="footer__phone" href="tel:+78001234567">
+          <span class="footer__phone-numbers">8 800 123 45 67</span>
+          <span class="footer__phone-text">для помощи и волонтеров</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">
+        © Благотворительный фонд «Название» 2022.
+        <a href="#">
+          Политика в отношении обработки и защиты персональных данных.
+        </a>
+      </div>
+      <a class="company" href="https://razrabotka-saita.ru/" target="_blank">
+        <span>Разработка сайта</span>
+        <picture>
+          <source srcset="img/logo-company.avif" type="image/avif" />
+          <source srcset="img/logo-company.webp" type="image/webp" />
+          <img
+            class="image"
+            loading="lazy"
+            src="img/logo-company.png"
+            alt="АдвансМедиа"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

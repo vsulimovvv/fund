@@ -1,0 +1,44 @@
+.hero {
+  color: var(--color-white);
+  min-height: 650px;
+  background-image: url("../img/hero-bg.jpg");
+  @include background(cover);
+  @include adaptive-value("padding-top", 100, 80, 1);
+  @include adaptive-value("padding-bottom", 100, 50, 1);
+
+  @include breakpointsMaxW($bp-991) {
+    background-position-x: 40%;
+  }
+
+  @include breakpointsMaxW($bp-576) {
+    background-image: url("../img/hero-bg-mobile.jpg");
+  }
+
+  &__title {
+    line-height: 1.3;
+    font-family: $Oswald;
+    text-transform: uppercase;
+    @include adaptive-value("font-size", 55, 25, 1);
+    @include adaptive-value("margin-bottom", 30, 15, 1);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__text {
+    max-width: 325px;
+    @include adaptive-value("font-size", 19, 13, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 200px;
+    }
+  }
+}
