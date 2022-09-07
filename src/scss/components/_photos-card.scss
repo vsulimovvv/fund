@@ -65,6 +65,10 @@
       }
     }
 
+    &:active {
+      transform: translate(-50%, -50%) scale(0.98);
+    }
+
     &::after {
       @include elDef();
       width: 20px;

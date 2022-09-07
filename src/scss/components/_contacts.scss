@@ -1,21 +1,16 @@
 .contacts {
-  @include adaptive-value("padding-top", 60, 40, 1);
-  @include adaptive-value("padding-bottom", 175, 90, 1);
   position: relative;
-  background-color: #fffff0;
+  @include adaptive-value("padding-top", 60, 40, 1);
+  @include adaptive-value("padding-bottom", 175, 50, 1);
 
-  &__title {
-    @include fz25();
-    @include adaptive-value("margin-bottom", 30, 20, 1);
-
-    @include breakpointsMaxW($bp-991) {
-      margin-bottom: 25px;
-    }
+  @include breakpointsMaxW($bp-991) {
+    text-align: center;
+    padding-bottom: 50px;
   }
 
-  &__top {
-    @include adaptive-value("margin-bottom", 75, 40, 1);
-    line-height: 1.8;
+  &__title {
+    @include fz35();
+    @include adaptive-value("margin-bottom", 100, 35, 1);
 
     @include breakpointsMaxW($bp-991) {
       margin-bottom: 25px;
@@ -23,7 +18,7 @@
   }
 
   &__info {
-    @include adaptive-value("margin-bottom", 40, 30, 1);
+    @include adaptive-value("margin-bottom", 35, 25, 1);
   }
 
   &__left {
@@ -41,17 +36,25 @@
 
   &__text {
     color: #2c2c2c;
-    @include adaptive-value("margin-bottom", 42, 25, 1);
-    @include adaptive-value("font-size", 15, 14, 1);
+    max-width: 275px;
+    @include adaptive-value("margin-bottom", 57, 25, 1);
 
     @include breakpointsMaxW($bp-991) {
-      margin-bottom: 25px;
+      max-width: 95%;
+      margin: 0 auto;
+      margin-bottom: 35px;
     }
   }
 
   &__item {
+    font-size: 17px;
+
+    @include breakpointsMaxW($bp-360) {
+      font-size: 15px;
+    }
+
     &:not(:last-child) {
-      @include adaptive-value("margin-bottom", 15, 10, 1);
+      @include adaptive-value("margin-bottom", 10, 7, 1);
     }
 
     a {
@@ -78,6 +81,20 @@
       position: static;
       width: 100%;
       height: calc(250px + (400 - 250) * ((100vw - 320px) / (991 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include breakpointsMaxW($bp-991) {
+        display: block;
+        height: calc(190px + (400 - 190) * ((100vw - 320px) / (991 - 320)));
+        margin-bottom: 35px;
+      }
     }
   }
 }

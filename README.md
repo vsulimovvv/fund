@@ -10,3 +10,6 @@
 Если нужна помощь: https://vsulimovvv.github.io/fund/app/help.html  
 Фотоотчеты: https://vsulimovvv.github.io/fund/app/photo-report.html  
 Фотоотчеты 2: https://vsulimovvv.github.io/fund/app/photo-report-2.html  
+Как помочь: https://vsulimovvv.github.io/fund/app/how-help.html  
+Описание проекта: https://vsulimovvv.github.io/fund/app/how-help.html  
+Описание новости: https://vsulimovvv.github.io/fund/app/descr-news.html  

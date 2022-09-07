@@ -112,4 +112,10 @@ $maxWidthContainer: 1350;
   @include adaptive-value("font-size", 40, 25, 1);
 }
 
+@mixin fz45() {
+  font-family: $Oswald;
+  text-transform: uppercase;
+  @include adaptive-value("font-size", 45, 25, 1);
+}
+
 //  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1270 - 320)));

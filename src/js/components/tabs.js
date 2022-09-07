@@ -1,5 +1,5 @@
 // * ===== Toggle Tabs
-export default function someTabs(
+export default function tabs(
   headerSelector,
   tabSelector,
   contentSelector,

@@ -9,8 +9,7 @@
 // import toggleAccordion from "./components/accordion";
 // import { handlesSlider, handlesSliderProfit } from "./components/rangeSlider";
 // import modals from "./components/modals";
-// import showFilters from "./components/showFilters";
-import loadForm from "./components/formUpload";
+import tabs from "./components/tabs";
 
 // handlesSlider();
 // handlesSliderProfit();
@@ -22,6 +21,12 @@ import loadForm from "./components/formUpload";
 // showFilters();
 // productSlider();
 // someBusiness();
+tabs(
+  ".donation-block__top",
+  ".donation-block__btn",
+  ".donation-block__content",
+  "active"
+);
 
 // function maskInput() {
 //   const elements = document.querySelectorAll('input[type="tel"]');
@@ -34,13 +39,16 @@ import loadForm from "./components/formUpload";
 // }
 // maskInput();
 
-// import Choices from "choices.js";
-// const element = document.querySelectorAll("select");
-// element.forEach((el) => {
-//   const choices = new Choices(el, {
-//     itemSelectText: "",
-//     searchEnabled: false,
-//   });
-// });
+import Choices from "choices.js";
+const element = document.querySelectorAll("select");
+element.forEach((el) => {
+  const choices = new Choices(el, {
+    itemSelectText: "",
+    searchEnabled: false,
+  });
+});
+
+import { Fancybox } from "@fancyapps/ui";
+import loadForm from "./components/formUpload";
 
 loadForm();

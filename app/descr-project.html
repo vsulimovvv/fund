@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Система добра</title>
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+  />
+
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+  /> -->
+
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+    integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="
+  ></script> -->
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="popup popup--projects">
+  <div class="popup__container">
+    <div class="popup__top">
+      <span class="popup__name">Получить консультацию</span>
+
+      <button class="popup__close" type="button">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="popup__body">
+      <form class="form-sell form-sell--dark">
+        <label class="form-sell__group">
+          <input
+            class="form-sell__input"
+            type="tel"
+            placeholder="Введите Ваш телефон"
+          />
+        </label>
+        <button class="form-sell__btn btn btn--white" type="submit">
+          Получить консультацию
+        </button>
+        <label class="form-sell__checkbox checkbox checkbox--white">
+          <input class="checkbox__input" type="checkbox" checked />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text"
+            >Отправляя заявку я соглашаюсь на обработку персональных
+            данных</span
+          >
+        </label>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="site-container">
+      <header class="header">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="img/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О программе</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Обучение</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Полезные материалы</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <button class="mobile-menu__btn btn" type="button">Купить бизнес</button>
+      <button class="mobile-menu__btn btn btn--bordered" type="button">
+        Продать бизнес
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <nav class="header__wrapper">
+      <a class="header__logo logo" href="#">
+        <img src="img/logo.png" alt="Логотип" />
+      </a>
+
+      <div class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link active" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О фонде </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Фотоотчеты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Как помочь</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Если вам нужна помощь</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+      <main class="main mt"><section class="descr-projects">
+  <div class="container">
+    <div class="descr-projects__wrapper">
+      <div class="descr-projects__side side-nav">
+        <div class="side-nav__inner">
+          <div class="side-nav__top">
+            <h2 class="side-nav__title">Все проекты</h2>
+          </div>
+
+          <ul class="side-nav__list">
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#">Детские мероприятия</a>
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#">Адресная помощь</a>
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#"
+                >Профориентация для подростков</a
+              >
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link active" href="#">Наставничество</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="block-consultation">
+          <div class="block-consultation__inner">
+            <div class="block-consultation__person">
+              <picture>
+                <source srcset="img/person.avif" type="image/avif" />
+                <source srcset="img/person.webp" type="image/webp" />
+                <img
+                  class="block-consultation__avatar"
+                  loading="lazy"
+                  src="img/person.jpg"
+                  alt="person"
+                />
+              </picture>
+              <div class="block-consultation__person-info">
+                <strong class="block-consultation__name">Елена</strong>
+                <span class="block-consultation__count"> менеджер фонда </span>
+              </div>
+            </div>
+
+            <div class="block-consultation__text">
+              <span class="block-consultation__heading">
+                Получить консультацию
+              </span>
+
+              <p>
+                Оставьте Ваш телефон и мы свяжемся с Вами, и ответим на все Ваши
+                вопросы.
+              </p>
+            </div>
+
+            <form class="block-consultation__form form-consultation">
+              <div class="form-consultation__group">
+                <label class="form-consultation__label" for="phone"
+                  >Телефон</label
+                >
+                <input
+                  class="form-consultation__input"
+                  type="tel"
+                  id="phone"
+                  placeholder="+7 (___) ___ - __ - __"
+                />
+              </div>
+
+              <button
+                class="form-consultation__btn btn btn--dark"
+                type="button"
+              >
+                Заказать звонок
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="descr-projects__content">
+        <div class="descr-projects__top">
+          <h1 class="descr-projects__title">Наставничество</h1>
+          <p class="descr-projects__text">
+            Исследования показывают, что буквально в первые полгода после
+            выпуска многие воспитанники детдомов попадают в неприятные истории:
+            бросают учебу, становятся жертвами мошенников, влезают в крупные
+            долги, оказываются без работы.
+          </p>
+
+          <picture>
+            <source srcset="img/descr-projects.avif" type="image/avif" />
+            <source srcset="img/descr-projects.webp" type="image/webp" />
+            <img
+              class="descr-projects__img"
+              src="img/descr-projects.jpg"
+              alt="projects"
+              loading="lazy"
+            />
+          </picture>
+
+          <p>
+            Вдобавок к бытовым трудностям на выпускника наваливается чувство
+            огромного одиночества после привычной жизни в большом коллективе
+            детдома. Зачастую подросток не справляется с переменами и
+            оказывается в сложной жизненной ситуации. Многие так и не находят
+            своего места в обществе.
+          </p>
+        </div>
+
+        <div class="descr-projects__text">
+          <h3 class="descr-projects__heading">
+            Наставник. Отвечает на вопрос «Как»?
+          </h3>
+          <p>
+            Как выбрать продукты в супермаркете? Как оплатить коммунальные
+            счета? Как справиться с волнением и пройти собеседование? Как
+            рассказать кому-то о том, что чувствуешь?
+          </p>
+          <p>
+            На все эти вопросы знает ответ любой человек, если только он не
+            выпускник детдома.
+          </p>
+          <p>
+            У ребенка из детского дома нет простейших бытовых и социальных
+            навыков, ведь большую часть своей жизни он провел в среде, где все
+            решалось за него, как в пионерском лагере. Перед его глазами не было
+            модели семьи, благодаря которой дети многое узнают, начиная с
+            ответов на вопрос, что делать, если болят зубы или живот, и
+            заканчивая более сложными темами: отношения с близкими, поиск
+            работы, навыки самостоятельной жизни.
+          </p>
+          <p>
+            Воспитатели, учителя, волонтеры — его ежедневное окружение. Они
+            трудятся изо дня в день, выполняя свои задачи, но не могут уделить
+            достаточно времени каждому. Значит, у ребенка нет значимого
+            взрослого, которому он мог бы довериться и прийти с важным вопросом
+            или проблемой.
+          </p>
+        </div>
+
+        <div class="descr-projects__text">
+          <h3 class="descr-projects__heading">
+            Что даст наставничество ребенку?
+          </h3>
+
+          <p>
+            Наставничество дает ребенку чувство нужности кому-то, развивает
+            доверие к миру, дарит шанс почувствовать свои силы и найти мотивацию
+            к росту.
+          </p>
+        </div>
+
+        <div class="block-consultation block-consultation--mobile">
+          <div class="block-consultation__inner">
+            <div class="block-consultation__person">
+              <picture>
+                <source srcset="img/person.avif" type="image/avif" />
+                <source srcset="img/person.webp" type="image/webp" />
+                <img
+                  class="block-consultation__avatar"
+                  loading="lazy"
+                  src="img/person.jpg"
+                  alt="person"
+                />
+              </picture>
+              <div class="block-consultation__person-info">
+                <strong class="block-consultation__name">Елена</strong>
+                <span class="block-consultation__count"> менеджер фонда </span>
+              </div>
+            </div>
+
+            <div class="block-consultation__text">
+              <span class="block-consultation__heading">
+                Получить консультацию
+              </span>
+
+              <p>
+                Оставьте Ваш телефон и мы свяжемся с Вами, и ответим на все Ваши
+                вопросы.
+              </p>
+            </div>
+
+            <form class="block-consultation__form form-consultation">
+              <div class="form-consultation__group">
+                <label class="form-consultation__label" for="phone"
+                  >Телефон</label
+                >
+                <input
+                  class="form-consultation__input"
+                  type="tel"
+                  id="phone"
+                  placeholder="+7 (___) ___ - __ - __"
+                />
+              </div>
+
+              <button
+                class="form-consultation__btn btn btn--dark"
+                type="button"
+              >
+                Заказать звонок
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <a class="footer__logo logo" href="#">
+          <img src="img/logo.png" alt="Логотип" />
+        </a>
+      </div>
+      <div class="footer__lists">
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#"> О фонде</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#"> Наши проекты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Фотоотчеты </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Как помочь</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Если вам нужна помощь </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <a class="footer__phone" href="tel:+78001234567">
+          <span class="footer__phone-numbers">8 800 123 45 67</span>
+          <span class="footer__phone-text">для помощи и волонтеров</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copy">
+        © Благотворительный фонд «Название» 2022.
+        <a href="#">
+          Политика в отношении обработки и защиты персональных данных.
+        </a>
+      </div>
+      <a class="company" href="https://razrabotka-saita.ru/" target="_blank">
+        <span>Разработка сайта</span>
+        <picture>
+          <source srcset="img/logo-company.avif" type="image/avif" />
+          <source srcset="img/logo-company.webp" type="image/webp" />
+          <img
+            class="image"
+            loading="lazy"
+            src="img/logo-company.png"
+            alt="АдвансМедиа"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>
