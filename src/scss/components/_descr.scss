@@ -16,6 +16,8 @@
 
   &__title {
     @include fz40();
+    font-family: $Inter;
+    text-transform: none;
 
     span {
       color: var(--color-accent);
