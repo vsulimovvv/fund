@@ -6,14 +6,11 @@
   z-index: 10;
   transition: 200ms ease;
   background-color: var(--color-white);
-
   padding: 20px 0;
 
   @include breakpointsMaxW($bp-768) {
     padding: 15px 0;
   }
-
- 
 
   &.scroll-header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);

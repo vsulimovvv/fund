@@ -8,7 +8,20 @@
     <div class="site-container">
       @include('partials/header.html')
 
-      <main class="main mt">@include('partials/projects-section.html')</main>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link active">Наши проекты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">@include('partials/projects-section.html')</main>
 
       @include('partials/footer.html')
     </div>

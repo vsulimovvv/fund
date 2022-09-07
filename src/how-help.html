@@ -8,9 +8,20 @@
     <div class="site-container">
       @include('partials/header.html')
 
-      <main class="main mt">
-        @include('partials/how-help-section.html')
-      </main>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link active">Как помочь</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">@include('partials/how-help-section.html')</main>
 
       @include('partials/footer.html')
     </div>

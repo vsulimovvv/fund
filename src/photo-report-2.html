@@ -8,7 +8,25 @@
     <div class="site-container">
       @include('partials/header.html')
 
-      <main class="main mt">@include('partials/photos-2.html')</main>
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Фотоотчеты</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link active">
+                Фотоотчеты с мероприятий от 01.01.22
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">@include('partials/photos-2.html')</main>
 
       @include('partials/footer.html')
     </div>

@@ -23,9 +23,9 @@
       top: 50%;
       transform: translateY(-50%);
       right: 0;
-      @include maskImage(url("../img/chevron.svg"), contain);
       background-color: var(--color-light);
       transition: 250ms ease;
+      @include maskImage(url("../img/chevron.svg"), contain);
     }
   }
 

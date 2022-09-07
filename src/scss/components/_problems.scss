@@ -45,7 +45,6 @@
     @include elDef();
     left: 50%;
     transform: translateX(-50%);
-
     @include adaptive-value("width", 56, 41, 1);
     @include adaptive-value("height", 56, 41, 1);
     @include adaptive-value("top", 35, 30, 1);

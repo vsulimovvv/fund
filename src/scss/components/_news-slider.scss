@@ -61,6 +61,7 @@
       height: 4px;
       background-color: #e7e7e7;
     }
+
     .swiper-pagination-progressbar-fill {
       background-color: #c9c9c9;
     }
@@ -69,7 +70,6 @@
   &__slide {
     box-sizing: border-box;
     max-width: 385px;
-
     @include adaptive-value("max-width", 385, 245, 1);
   }
 }

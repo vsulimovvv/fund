@@ -54,6 +54,11 @@
   position: relative;
   margin: 0 auto;
   height: 100%;
+  transition: 200ms ease;
+
+  &:hover{
+    background-color: lighten(#f6f6f6,10%);
+  }
 
   @include breakpointsMaxW($bp-container) {
     padding-left: 65px;
@@ -70,8 +75,8 @@
     height: 25px;
     top: 35px;
     left: 40px;
-    @include backgroundImage(url("../img/img-pdf-file.png"), contain);
     @include adaptive-value("top", 35, 23, 1);
+    @include backgroundImage(url("../img/img-pdf-file.png"), contain);
 
     @include breakpointsMaxW($bp-container) {
       left: 20px;
@@ -88,8 +93,8 @@
     line-height: 1;
     font-weight: 700;
     color: #282828;
+    flex-grow: 1;
     @include adaptive-value("font-size", 20, 13, 1);
     @include adaptive-value("margin-bottom", 10, 5, 1);
-    flex-grow: 1;
   }
 }

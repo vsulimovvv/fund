@@ -1,8 +1,8 @@
 .hero {
   color: var(--color-white);
   min-height: 650px;
-  background-image: url("../img/hero-bg.jpg");
   position: relative;
+  background-image: url("../img/hero-bg.jpg");
   @include background(cover);
   @include adaptive-value("padding-top", 100, 80, 1);
   @include adaptive-value("padding-bottom", 150, 120, 1);

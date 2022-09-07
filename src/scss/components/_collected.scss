@@ -70,8 +70,8 @@
     grid-template-columns: 0.55fr 1fr;
     align-items: center;
     min-height: 440px;
-    @include adaptive-value("gap", 25, 15, 1);
     min-width: 0;
+    @include adaptive-value("gap", 25, 15, 1);
 
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: 1fr;
@@ -160,8 +160,8 @@
     line-height: 1.5;
     font-weight: 600;
     color: #282827;
-    @include adaptive-value("font-size", 23, 18, 1);
     margin-bottom: 10px;
+    @include adaptive-value("font-size", 23, 18, 1);
   }
 
   &__text {

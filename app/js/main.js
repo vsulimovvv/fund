@@ -20,6 +20,32 @@ const t=t=>"object"==typeof t&&null!==t&&t.constructor===Object&&"[object Object
 
 /***/ }),
 
+/***/ "./src/js/components/customSelect.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/customSelect.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ customSelect)
+/* harmony export */ });
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_0__);
+
+function customSelect() {
+  const element = document.querySelectorAll("select");
+  element.forEach(el => {
+    const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(el, {
+      itemSelectText: "",
+      searchEnabled: false
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/components/fixedHeader.js":
 /*!******************************************!*\
   !*** ./src/js/components/fixedHeader.js ***!
@@ -79,6 +105,31 @@ function loadForm() {
       if (this.files && this.files.length >= 1) countFiles = this.files.length;
       if (countFiles) label.querySelector(".custom-file-upload span").innerText = "Выбрано файлов: " + countFiles;else label.querySelector(".custom-file-upload span").innerText = labelVal;
     });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/maskInput.js":
+/*!****************************************!*\
+  !*** ./src/js/components/maskInput.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ maskInput)
+/* harmony export */ });
+/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! imask */ "./node_modules/imask/esm/index.js");
+
+function maskInput() {
+  const elements = document.querySelectorAll('input[type="tel"]');
+  elements.forEach(el => {
+    const maskOptions = {
+      mask: "+{7} (000) 000-00-00"
+    };
+    (0,imask__WEBPACK_IMPORTED_MODULE_0__["default"])(el, maskOptions);
   });
 }
 
@@ -25837,64 +25888,35 @@ var __webpack_exports__ = {};
   !*** ./src/js/main.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! imask */ "./node_modules/imask/esm/index.js");
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
 /* harmony import */ var _components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fixedHeader */ "./src/js/components/fixedHeader.js");
 /* harmony import */ var _components_showMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/showMenu */ "./src/js/components/showMenu.js");
 /* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
-/* harmony import */ var _components_formUpload__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/formUpload */ "./src/js/components/formUpload.js");
-
- // import toggleAccordion from "./components/accordion";
-// categoriesSlisder();
-// toggleAccordion(".accordion__control", ".accordion__content", ".accordion");
+/* harmony import */ var _components_formUpload__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/formUpload */ "./src/js/components/formUpload.js");
+/* harmony import */ var _components_maskInput__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/maskInput */ "./src/js/components/maskInput.js");
+/* harmony import */ var _components_customSelect__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/customSelect */ "./src/js/components/customSelect.js");
 
 
 
 
 
-(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".donation-block__top", ".donation-block__btn", ".donation-block__content", "active");
-(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".tabs-projects__nav", ".tabs-projects__nav-btn", ".tabs-projects__panel", "active");
+
+
+
+
 (0,_components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__["default"])();
-
-function maskInput() {
-  const elements = document.querySelectorAll('input[type="tel"]');
-  elements.forEach(el => {
-    const maskOptions = {
-      mask: "+{7} (000) 000-00-00"
-    };
-    (0,imask__WEBPACK_IMPORTED_MODULE_0__["default"])(el, maskOptions);
-  });
-}
-
-maskInput();
-
-const element = document.querySelectorAll("select");
-element.forEach(el => {
-  const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_6___default())(el, {
-    itemSelectText: "",
-    searchEnabled: false
-  });
-});
-
-
-(0,_components_formUpload__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_components_maskInput__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_components_customSelect__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_components_formUpload__WEBPACK_IMPORTED_MODULE_6__["default"])();
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.projects)();
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.sliderNews)();
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.collectedSlider)();
 (0,_components_showMenu__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_components_modals__WEBPACK_IMPORTED_MODULE_4__["default"])();
-
-function sum() {
-  const sumNow = document.querySelector(".sum-block__left span");
-  const sumTarget = document.querySelector(".sum-block__right span");
-  console.log(sumNow.textContent);
-}
-
-sum();
+(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".donation-block__top", ".donation-block__btn", ".donation-block__content", "active");
+(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".tabs-projects__nav", ".tabs-projects__nav-btn", ".tabs-projects__panel", "active");
 })();
 
 /******/ })()

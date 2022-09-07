@@ -10,11 +10,11 @@
 
   &__wrapper {
     border-radius: 10px;
+    @include background(cover);
     @include adaptive-value("padding-top", 80, 50, 1);
     @include adaptive-value("padding-bottom", 80, 50, 1);
     @include adaptive-value("padding-left", 90, 25, 1);
     @include adaptive-value("padding-right", 90, 25, 1);
-    @include background(cover);
 
     @include breakpointsMaxW($bp-768) {
       border-radius: 0;
