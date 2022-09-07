@@ -1,9 +1,5 @@
 // import IMask from "imask";
-// import {
-//   categoriesSlisder,
-//   productSlider,
-//   someBusiness,
-// } from "./components/slider";
+import { projects } from "./components/slider";
 // import fixedHeader from "./components/fixedHeader";
 // import showMenu from "./components/showMenu";
 // import toggleAccordion from "./components/accordion";
@@ -25,6 +21,12 @@ tabs(
   ".donation-block__top",
   ".donation-block__btn",
   ".donation-block__content",
+  "active"
+);
+tabs(
+  ".tabs-projects__nav",
+  ".tabs-projects__nav-btn",
+  ".tabs-projects__panel",
   "active"
 );
 
@@ -52,3 +54,4 @@ import { Fancybox } from "@fancyapps/ui";
 import loadForm from "./components/formUpload";
 
 loadForm();
+projects();

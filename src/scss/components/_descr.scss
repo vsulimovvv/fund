@@ -1,4 +1,6 @@
 .descr {
+  @include adaptive-value("padding-top", 145, 125, 1);
+
   &__wrapper {
     display: grid;
     grid-template-columns: auto 1fr;
