@@ -7,17 +7,17 @@
   transition: 200ms ease;
   background-color: var(--color-white);
 
-  @include adaptive-value("padding-top", 30, 15, 1);
-  @include adaptive-value("padding-bottom", 30, 15, 1);
+  padding: 20px 0;
 
   @include breakpointsMaxW($bp-768) {
-    top: -5px;
+    padding: 15px 0;
   }
+
+ 
 
   &.scroll-header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    @include adaptive-value("padding-top", 15, 10, 1);
-    @include adaptive-value("padding-bottom", 15, 10, 1);
+    padding: 15px 0;
   }
 
   &__wrapper {

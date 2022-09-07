@@ -6,8 +6,8 @@
   left: 0;
   top: 0;
   height: 100vh;
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-dark);
   z-index: 12;
   width: 100%;
   transform: translateY(-100%);
@@ -43,7 +43,7 @@
 
       path {
         transition: 200ms ease;
-        stroke: var(--color-light);
+        stroke: var(--color-dark);
       }
     }
   }
@@ -68,20 +68,6 @@
 
     &:hover {
       color: var(--color-white);
-    }
-  }
-
-  &__btns {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .mobile-menu__btn {
-      width: 160px;
-      
-      &:not(:last-child) {
-        margin-bottom: 20px;
-      }
     }
   }
 }

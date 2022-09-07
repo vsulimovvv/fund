@@ -1,7 +1,7 @@
-<div class="popup popup--projects">
+<div class="popup popup--volunteer">
   <div class="popup__container">
     <div class="popup__top">
-      <span class="popup__name">Получить консультацию</span>
+      <span class="popup__name">Стать волонтером</span>
 
       <button class="popup__close" type="button">
         <svg>
@@ -10,25 +10,20 @@
       </button>
     </div>
     <div class="popup__body">
-      <form class="form-sell form-sell--dark">
-        <label class="form-sell__group">
+      <form class="popup__form form-consultation">
+        <div class="form-consultation__group">
+          <label class="form-consultation__label" for="phone">Телефон</label>
           <input
-            class="form-sell__input"
+            class="form-consultation__input"
             type="tel"
-            placeholder="Введите Ваш телефон"
+            id="phone"
+            placeholder="+7 (___) ___ - __ - __"
           />
-        </label>
-        <button class="form-sell__btn btn btn--white" type="submit">
-          Получить консультацию
+        </div>
+
+        <button class="form-consultation__btn btn btn--dark" type="button">
+          Стать волонтером
         </button>
-        <label class="form-sell__checkbox checkbox checkbox--white">
-          <input class="checkbox__input" type="checkbox" checked />
-          <span class="checkbox__box"></span>
-          <span class="checkbox__text"
-            >Отправляя заявку я соглашаюсь на обработку персональных
-            данных</span
-          >
-        </label>
       </form>
     </div>
   </div>

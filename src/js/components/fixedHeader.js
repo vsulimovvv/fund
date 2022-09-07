@@ -2,7 +2,7 @@
 export default function fixedHeader() {
   function scrollHeader() {
     const nav = document.querySelector("header");
-    if (this.scrollY >= 90) {
+    if (this.scrollY >= 80) {
       nav.classList.add("scroll-header");
     } else {
       nav.classList.remove("scroll-header");

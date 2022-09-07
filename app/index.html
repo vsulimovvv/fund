@@ -34,10 +34,10 @@
 </head>
 
   <body class="page__body">
-    <div class="popup popup--projects">
+    <div class="popup popup--volunteer">
   <div class="popup__container">
     <div class="popup__top">
-      <span class="popup__name">Получить консультацию</span>
+      <span class="popup__name">Стать волонтером</span>
 
       <button class="popup__close" type="button">
         <svg>
@@ -46,25 +46,20 @@
       </button>
     </div>
     <div class="popup__body">
-      <form class="form-sell form-sell--dark">
-        <label class="form-sell__group">
+      <form class="popup__form form-consultation">
+        <div class="form-consultation__group">
+          <label class="form-consultation__label" for="phone">Телефон</label>
           <input
-            class="form-sell__input"
+            class="form-consultation__input"
             type="tel"
-            placeholder="Введите Ваш телефон"
+            id="phone"
+            placeholder="+7 (___) ___ - __ - __"
           />
-        </label>
-        <button class="form-sell__btn btn btn--white" type="submit">
-          Получить консультацию
+        </div>
+
+        <button class="form-consultation__btn btn btn--dark" type="button">
+          Стать волонтером
         </button>
-        <label class="form-sell__checkbox checkbox checkbox--white">
-          <input class="checkbox__input" type="checkbox" checked />
-          <span class="checkbox__box"></span>
-          <span class="checkbox__text"
-            >Отправляя заявку я соглашаюсь на обработку персональных
-            данных</span
-          >
-        </label>
       </form>
     </div>
   </div>
@@ -94,14 +89,14 @@
         >
           <path
             d="M6 6L18 18"
-            stroke="#f1ebda"
+            stroke="#1a1a1a"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
             d="M18 6L6 18"
-            stroke="#f1ebda"
+            stroke="#1a1a1a"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -112,25 +107,28 @@
 
     <ul class="mobile-menu__list">
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">О программе</a>
+        <a class="mobile-menu__link" href="#">Главная</a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Проекты</a>
+        <a class="mobile-menu__link" href="#">О фонде</a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Обучение</a>
+        <a class="mobile-menu__link" href="#">Наши проекты </a>
       </li>
       <li class="mobile-menu__item">
-        <a class="mobile-menu__link" href="#">Полезные материалы</a>
+        <a class="mobile-menu__link" href="#">Фотоотчеты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Как помочь</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Если вам нужна помощь</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Контакты</a>
       </li>
     </ul>
 
-    <div class="mobile-menu__btns">
-      <button class="mobile-menu__btn btn" type="button">Купить бизнес</button>
-      <button class="mobile-menu__btn btn btn--bordered" type="button">
-        Продать бизнес
-      </button>
-    </div>
   </div>
   <!-- Mobile Menu -->
 
@@ -322,16 +320,17 @@
             <ul class="collected__list swiper-wrapper">
               <li class="collected__item swiper-slide">
                 <article class="collected-card">
-                  <picture>
-                    <source srcset="img/collected.avif" type="image/avif" />
-                    <source srcset="img/collected.webp" type="image/webp" />
-                    <img
-                      class="collected-card__img"
-                      src="img/collected.jpg"
-                      alt="collected"
-                      loading="lazy"
-                    />
-                  </picture>
+                  <div class="collected-card__img">
+                    <picture>
+                      <source srcset="img/collected.avif" type="image/avif" />
+                      <source srcset="img/collected.webp" type="image/webp" />
+                      <img
+                        src="img/collected.jpg"
+                        alt="collected"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
 
                   <div class="collected-card__info">
                     <h3 class="collected-card__title">
@@ -344,21 +343,41 @@
                       подросток, который вынужден был стать взрослым слишком
                       рано.
                     </p>
+
+                    <div class="sum-block">
+                      <div class="sum-block__top">
+                        <span>60%</span> от нужной суммы
+                      </div>
+
+                      <div class="sum-block__line">
+                        <span class="sum-block__line-fill"></span>
+                      </div>
+
+                      <div class="sum-block__bottom">
+                        <div class="sum-block__left">
+                          Уже собрали <span>3 000 000 ₽</span>
+                        </div>
+                        <div class="sum-block__right">
+                          Цель <span>5 000 000 ₽</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
               </li>
               <li class="collected__item swiper-slide">
                 <article class="collected-card">
-                  <picture>
-                    <source srcset="img/collected.avif" type="image/avif" />
-                    <source srcset="img/collected.webp" type="image/webp" />
-                    <img
-                      class="collected-card__img"
-                      src="img/collected.jpg"
-                      alt="collected"
-                      loading="lazy"
-                    />
-                  </picture>
+                  <div class="collected-card__img">
+                    <picture>
+                      <source srcset="img/collected.avif" type="image/avif" />
+                      <source srcset="img/collected.webp" type="image/webp" />
+                      <img
+                        src="img/collected.jpg"
+                        alt="collected"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
 
                   <div class="collected-card__info">
                     <h3 class="collected-card__title">
@@ -371,21 +390,41 @@
                       подросток, который вынужден был стать взрослым слишком
                       рано.
                     </p>
+
+                    <div class="sum-block">
+                      <div class="sum-block__top">
+                        <span>60%</span> от нужной суммы
+                      </div>
+
+                      <div class="sum-block__line">
+                        <span class="sum-block__line-fill"></span>
+                      </div>
+
+                      <div class="sum-block__bottom">
+                        <div class="sum-block__left">
+                          Уже собрали <span>3 000 000 ₽</span>
+                        </div>
+                        <div class="sum-block__right">
+                          Цель <span>5 000 000 ₽</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
               </li>
               <li class="collected__item swiper-slide">
                 <article class="collected-card">
-                  <picture>
-                    <source srcset="img/collected.avif" type="image/avif" />
-                    <source srcset="img/collected.webp" type="image/webp" />
-                    <img
-                      class="collected-card__img"
-                      src="img/collected.jpg"
-                      alt="collected"
-                      loading="lazy"
-                    />
-                  </picture>
+                  <div class="collected-card__img">
+                    <picture>
+                      <source srcset="img/collected.avif" type="image/avif" />
+                      <source srcset="img/collected.webp" type="image/webp" />
+                      <img
+                        src="img/collected.jpg"
+                        alt="collected"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
 
                   <div class="collected-card__info">
                     <h3 class="collected-card__title">
@@ -398,6 +437,25 @@
                       подросток, который вынужден был стать взрослым слишком
                       рано.
                     </p>
+
+                    <div class="sum-block">
+                      <div class="sum-block__top">
+                        <span>60%</span> от нужной суммы
+                      </div>
+
+                      <div class="sum-block__line">
+                        <span class="sum-block__line-fill"></span>
+                      </div>
+
+                      <div class="sum-block__bottom">
+                        <div class="sum-block__left">
+                          Уже собрали <span>3 000 000 ₽</span>
+                        </div>
+                        <div class="sum-block__right">
+                          Цель <span>5 000 000 ₽</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </article>
               </li>
@@ -896,7 +954,9 @@
           </p>
         </div>
 
-        <button class="banner__btn btn" type="button">СТАТЬ ВОЛОНТЕРОМ</button>
+        <button class="banner__btn btn btn-volunteer" type="button">
+          СТАТЬ ВОЛОНТЕРОМ
+        </button>
       </div>
     </div>
   </div>
@@ -1035,6 +1095,7 @@
           </article>
         </li>
       </ul>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>

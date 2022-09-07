@@ -30,7 +30,7 @@
 
   &__link {
     display: block;
-    padding: 10px 0;
+    padding: 7px 0;
     transition: 200ms ease;
 
     &::after {
@@ -48,7 +48,7 @@
     &:hover,
     &.active {
       color: var(--color-accent);
-      
+
       &::after {
         transform: scaleX(1);
         transform-origin: left center;

@@ -53,6 +53,17 @@
 
   &__slider {
     position: relative;
+    @include adaptive-value("padding-bottom", 70, 30, 1);
+
+    .swiper-pagination {
+      top: initial;
+      bottom: 0;
+      height: 4px;
+      background-color: #e7e7e7;
+    }
+    .swiper-pagination-progressbar-fill {
+      background-color: #c9c9c9;
+    }
   }
 
   &__slide {

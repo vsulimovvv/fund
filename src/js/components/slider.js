@@ -20,7 +20,7 @@ function collectedSlider() {
     const swiper = new Swiper(el, {
       slidesPerView: 1,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".collected__content .swiper-pagination",
         clickable: true,
       },
     });
@@ -33,7 +33,10 @@ function sliderNews() {
     const swiper = new Swiper(el, {
       slidesPerView: "auto",
       spaceBetween: 15,
-
+      pagination: {
+        el: ".news-slider__slider .swiper-pagination",
+        type: "progressbar",
+      },
       breakpoints: {
         991: {
           spaceBetween: 40,

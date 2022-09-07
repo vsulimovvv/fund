@@ -20,6 +20,44 @@ const t=t=>"object"==typeof t&&null!==t&&t.constructor===Object&&"[object Object
 
 /***/ }),
 
+/***/ "./src/js/components/fixedHeader.js":
+/*!******************************************!*\
+  !*** ./src/js/components/fixedHeader.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ fixedHeader)
+/* harmony export */ });
+//* Change Background Header
+function fixedHeader() {
+  function scrollHeader() {
+    const nav = document.querySelector("header");
+
+    if (this.scrollY >= 80) {
+      nav.classList.add("scroll-header");
+    } else {
+      nav.classList.remove("scroll-header");
+    }
+  }
+
+  window.addEventListener("scroll", scrollHeader); // ! Change
+
+  function changeBg() {
+    const header = document.querySelector("header");
+
+    if (window.pageYOffset >= 90) {
+      header.classList.add("scroll-header");
+    }
+  }
+
+  changeBg();
+}
+
+/***/ }),
+
 /***/ "./src/js/components/formUpload.js":
 /*!*****************************************!*\
   !*** ./src/js/components/formUpload.js ***!
@@ -41,6 +79,93 @@ function loadForm() {
       if (this.files && this.files.length >= 1) countFiles = this.files.length;
       if (countFiles) label.querySelector(".custom-file-upload span").innerText = "Выбрано файлов: " + countFiles;else label.querySelector(".custom-file-upload span").innerText = labelVal;
     });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/modals.js":
+/*!*************************************!*\
+  !*** ./src/js/components/modals.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ modals)
+/* harmony export */ });
+// * ===== Modal
+function modals() {
+  function bindModal(openBtn, modal, close) {
+    const openBtnEl = document.querySelectorAll(openBtn);
+    const modalEl = document.querySelector(modal);
+    const closeEl = document.querySelectorAll(close);
+    const body = document.querySelector("body");
+
+    if (modalEl) {
+      openBtnEl.forEach(el => {
+        el.addEventListener("click", e => {
+          if (e.target) {
+            e.preventDefault();
+          }
+
+          modalEl.classList.add("active");
+          body.classList.add("no-scroll");
+        });
+      });
+      closeEl.forEach(btn => {
+        btn.addEventListener("click", e => {
+          modalEl.classList.remove("active");
+          body.classList.remove("no-scroll");
+        });
+      });
+      modalEl.addEventListener("click", e => {
+        if (e.target === modalEl) {
+          modalEl.classList.remove("active");
+          body.classList.remove("no-scroll");
+        }
+      });
+    }
+  }
+
+  bindModal(".btn-volunteer", ".popup--volunteer", ".popup__close");
+}
+
+/***/ }),
+
+/***/ "./src/js/components/showMenu.js":
+/*!***************************************!*\
+  !*** ./src/js/components/showMenu.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ showMenu)
+/* harmony export */ });
+// * ===== Show Menu
+function showMenu() {
+  const menuBtn = document.querySelector(".header__toggle");
+  const menu = document.querySelector(".mobile-menu");
+  const menuCloseBtn = document.querySelector(".mobile-menu__close");
+  const body = document.querySelector("body");
+  const overlay = document.querySelector(".overlay");
+  menuBtn.addEventListener("click", e => {
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+  });
+  overlay.addEventListener("click", e => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    body.classList.remove("no-scroll");
+  });
+  menuCloseBtn.addEventListener("click", e => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    body.classList.remove("no-scroll");
   });
 }
 
@@ -82,7 +207,7 @@ function collectedSlider() {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
       slidesPerView: 1,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".collected__content .swiper-pagination",
         clickable: true
       }
     });
@@ -95,6 +220,10 @@ function sliderNews() {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
       slidesPerView: "auto",
       spaceBetween: 15,
+      pagination: {
+        el: ".news-slider__slider .swiper-pagination",
+        type: "progressbar"
+      },
       breakpoints: {
         991: {
           spaceBetween: 40
@@ -25710,16 +25839,26 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var imask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! imask */ "./node_modules/imask/esm/index.js");
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
-/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
-/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
-/* harmony import */ var _components_formUpload__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/formUpload */ "./src/js/components/formUpload.js");
+/* harmony import */ var _components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fixedHeader */ "./src/js/components/fixedHeader.js");
+/* harmony import */ var _components_showMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/showMenu */ "./src/js/components/showMenu.js");
+/* harmony import */ var _components_modals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/modals */ "./src/js/components/modals.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! choices.js */ "./node_modules/choices.js/public/assets/scripts/choices.js");
+/* harmony import */ var choices_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(choices_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/fancybox.esm.js");
+/* harmony import */ var _components_formUpload__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/formUpload */ "./src/js/components/formUpload.js");
+
+ // import toggleAccordion from "./components/accordion";
+// categoriesSlisder();
+// toggleAccordion(".accordion__control", ".accordion__content", ".accordion");
 
 
 
-(0,_components_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])(".donation-block__top", ".donation-block__btn", ".donation-block__content", "active");
-(0,_components_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])(".tabs-projects__nav", ".tabs-projects__nav-btn", ".tabs-projects__panel", "active");
+
+
+(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".donation-block__top", ".donation-block__btn", ".donation-block__content", "active");
+(0,_components_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])(".tabs-projects__nav", ".tabs-projects__nav-btn", ".tabs-projects__panel", "active");
+(0,_components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
 function maskInput() {
   const elements = document.querySelectorAll('input[type="tel"]');
@@ -25735,31 +25874,27 @@ maskInput();
 
 const element = document.querySelectorAll("select");
 element.forEach(el => {
-  const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_3___default())(el, {
+  const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_6___default())(el, {
     itemSelectText: "",
     searchEnabled: false
   });
 });
 
 
-(0,_components_formUpload__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_components_formUpload__WEBPACK_IMPORTED_MODULE_8__["default"])();
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.projects)();
 (0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.sliderNews)();
-(0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.collectedSlider)(); // import fixedHeader from "./components/fixedHeader";
-// import showMenu from "./components/showMenu";
-// import toggleAccordion from "./components/accordion";
-// import { handlesSlider, handlesSliderProfit } from "./components/rangeSlider";
-// import modals from "./components/modals";
-// handlesSlider();
-// handlesSliderProfit();
-// showMenu();
-// categoriesSlisder();
-// fixedHeader();
-// toggleAccordion(".accordion__control", ".accordion__content", ".accordion");
-// modals();
-// showFilters();
-// productSlider();
-// someBusiness();
+(0,_components_slider__WEBPACK_IMPORTED_MODULE_1__.collectedSlider)();
+(0,_components_showMenu__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_components_modals__WEBPACK_IMPORTED_MODULE_4__["default"])();
+
+function sum() {
+  const sumNow = document.querySelector(".sum-block__left span");
+  const sumTarget = document.querySelector(".sum-block__right span");
+  console.log(sumNow.textContent);
+}
+
+sum();
 })();
 
 /******/ })()

@@ -1,6 +1,15 @@
 import IMask from "imask";
 import { projects, sliderNews, collectedSlider } from "./components/slider";
 
+// import toggleAccordion from "./components/accordion";
+
+// categoriesSlisder();
+
+// toggleAccordion(".accordion__control", ".accordion__content", ".accordion");
+
+import fixedHeader from "./components/fixedHeader";
+import showMenu from "./components/showMenu";
+import modals from "./components/modals";
 import tabs from "./components/tabs";
 
 tabs(
@@ -15,7 +24,7 @@ tabs(
   ".tabs-projects__panel",
   "active"
 );
-
+fixedHeader();
 function maskInput() {
   const elements = document.querySelectorAll('input[type="tel"]');
   elements.forEach((el) => {
@@ -43,20 +52,14 @@ loadForm();
 projects();
 sliderNews();
 collectedSlider();
+showMenu();
+modals();
 
-// import fixedHeader from "./components/fixedHeader";
-// import showMenu from "./components/showMenu";
-// import toggleAccordion from "./components/accordion";
-// import { handlesSlider, handlesSliderProfit } from "./components/rangeSlider";
-// import modals from "./components/modals";
+function sum() {
+  const sumNow = document.querySelector(".sum-block__left span");
+  const sumTarget = document.querySelector(".sum-block__right span");
 
-// handlesSlider();
-// handlesSliderProfit();
-// showMenu();
-// categoriesSlisder();
-// fixedHeader();
-// toggleAccordion(".accordion__control", ".accordion__content", ".accordion");
-// modals();
-// showFilters();
-// productSlider();
-// someBusiness();
+  console.log(sumNow.textContent);
+}
+
+sum();

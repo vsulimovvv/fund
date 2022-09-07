@@ -29,5 +29,5 @@ export default function modals() {
       });
     }
   }
-  bindModal(".header__btn", ".popup", ".popup__close");
+  bindModal(".btn-volunteer", ".popup--volunteer", ".popup__close");
 }
